@@ -1,32 +1,67 @@
 # Tugas-Alprog-2205551030
 
 Komang Ayu Agung Arya Aprilia_2205551030  
-Pada program ini, terdapat beberapa operasi aritmatika yang menggunakan fungsi dalam bahasa C. Program ini nantinya dapat digunakan untuk melakukan kegiatan perhitungan aritmatika sederhana. Ada beberapa fungsi aritmatika yang termuat disini, yaitu luas permukaan dan volume tabung, luas dan keliling segitiga siku-siku, luas dan keliling persegi panjang, kecepatan, baris dan deret artimatika, dan peluang.
+Pada program kali ini, terdapat fungsi yang dapat digunakan untuk melakukan perhitungan aritmatika sederhana. Di dalam program ini termuat beberapa unsur-unsur seperti:
+a.	Define PHI 3.14, yang akan mendefinisikan setiap variabel PHI dengan nilai 3.14. syntax define ini nantinya akan berguna pada program perhitungan luas permukaan dan volume tabung. 
 
-berikut adalah tampilan program saat berhasil dijalankan 
-a. program luas permukaan dan volume tabung
+ ![image](https://user-images.githubusercontent.com/114905113/196594360-dc863072-f413-41de-b5d3-34c8ad372e0e.png)
 
-![Screenshot (58)](https://user-images.githubusercontent.com/114905113/196047008-f356b82f-5b58-4181-bf34-362f802e9bba.png)
 
-program akan bekerja pada saat user menginput nilai jari-jari dan tinggi tabung. selanjutnya program akan memanggil fungsi yang sudah dideklarasikan di awal untuk melakukan perhitungan luas dan volume tabung, dengan nilai phi sudah didefinisikan dengan syntax #define PHI 3.14 sebelumnya.
 
-b. program luas dan keliling segitiga siku-siku
-![Screenshot (59)](https://user-images.githubusercontent.com/114905113/196047123-ac5153ee-d8a7-4be7-ad6d-31d8826f4a21.png)
-gambar di atas menunjukkan program dapat bekerja setelah di run. ketika user menginputkan nilai alas, tinggi, dan sisi miring segitiga siku-siku, program akan bekerja dengan memanggil fungsi yang sudah dideklarasikan. pada akhirnya akan muncul output yang menampilkan nilai akhir dari luas dan keliling segitiga siku-siku
+b.	Pendeklarasian fungsi
+Di dalam program ini, fungsi sudah dideklarasikan di awal program. Fungsi-fungsi tersebut berupa sejumlah baris pernyataan yang berisikan rumus-rumus dari operasi bilangan yang termuat di dalam menu. Tujuan dari penggunaan fungsi ini adalah untuk menghindari penulisan kode program yang berulang kali.
 
-c. luas dan keliling persegi panjang 
-![Screenshot (60)](https://user-images.githubusercontent.com/114905113/196047243-ceff247d-12a8-4a99-8d31-669ae3d96723.png)
-ketika user menginputkan nilai panjang dan lebar persegi panjang, program akan memanggil fungsi yang berisi rumus luas dan keliling persegi panjan untuk dapat menampilkan hasil berupa output yang memuat nilai akhir dari luas dan keliling persegi panjang.
+ ![image](https://user-images.githubusercontent.com/114905113/196594379-12d914f9-a2e8-4c6e-b8b8-f3d948205e53.png)
 
-d. rumus kecepatan
-![Screenshot (61)](https://user-images.githubusercontent.com/114905113/196047340-878dc8c5-cf96-471e-8100-f8222b9fce2e.png)
-ketika nilai jarak (dalam meter) dan waktu (detik) sudah diinputkan, program akan berjalan dan akan menampilkan output berupa nilai akhir dari kecepatan.
 
-e. baris dan deret aritmatika
-![Screenshot (62)](https://user-images.githubusercontent.com/114905113/196047450-96bfec30-9576-4d41-8e7f-f59c5a4cc68d.png)
-pada program di atas, menampilkan program untuk mencari nilai ke n (Un) dan juga jumlah nilai ke n (Sn). user harus menginput nilai n (banyaknya suku), a (nilau suku pertama) ,dan b (beda/ selisih suku pertama dan kedua). karena tipe data yang digunakan adalah float, jadi memungkinkan untuk menampung data yang berupa bilangan desimal.
+c.	Pilihan menu
+Menu yang terdapat di dalam program ini memuat beberapa operasi bilangan. User dapat memilih menu yang tersedia untuk melakukan operasi bilangan.
 
-f. rumus peluang
-![Screenshot (63)](https://user-images.githubusercontent.com/114905113/196047562-3b85e902-d034-457b-9008-fc11bb391c37.png)
-peluang merupakan kemungkinan terjadinya suatu peristiwa atau kejadian. peluang biasanya akan menghasilkan nilai akhir berupa pecahan atau bilangan desimal, oleh karena itu tipe data yang digunakan adalah tipe data float. ada beberapa variabel yang mewakili setiap nilai di dalam program ini. variabel nA mewakili nilai frekuensi kejadian, variabel nS mewakili nilai atau banyaknya ruang sampel. setelah user menginputkan nilai nA dan nS, maka program akan menampilkan output hasil dari peluang dengan memanggil fungsi yang sudah dideklarasikan sebelumnya.
+![image](https://user-images.githubusercontent.com/114905113/196594403-647da17d-dd6e-4708-bdd4-bd57194e7afe.png)
+
+ 
+Gambar di atas menunjukkan output menu ketika program berhasil dijalankan. User dapat memilih salah satu dari 7 menu untuk menghitung operasi bilangan. Jika user berniat untuk keluar dari program, user dapat memilih menu nomor 8 untuk keluar dari program,.
+
+d.	Operasi bilangan
+Setelah user menginputkan piihan pada menu, program akan berlanjut pada operasi bilangan. User akan diminta untuk menginputkan sejumlah nilai yang diperlukan untuk nantinya akan memunculkan output berupa hasil operasi.
+
+![image](https://user-images.githubusercontent.com/114905113/196594421-4fa6f164-dca6-4516-9ef2-6a0ef5a51a3e.png)
+
+  
+Pada program di atas menunjukkan ketika user memilih menu ke-3, yaitu program menghitung luas permukaan dan volume tabung. Di dalam program ini, user diminta untuk menginputkan nilai jari-jari serta tinggi dari tabung. Ketika inputan sudah benar, program akan menampilkan output “jadi, nilai luas permukaan adalah = …….”, dan “jadi, nilai volume adalah = …….”. 
+
+e.	Validasi inputan bilangan
+Validasi ini berguna untuk memastikan bahawa yang diinput itu hanya merupakan bilangan atau angka. Bila user menginputkan hal lain selain angka atau bilangan, program akan menampilkan output “INPUT HANYA BERUPA ANGKA, MOHON INPUT ULANG!”. Setelah itu, useri dapat menginput ulang bilangan untuk bisa lanjut ke tahap pengoperasian bilangan. Syntax dan hasil output  validasi dapat dilihat pada gambar di bawah ini.
+ 
+ ![image](https://user-images.githubusercontent.com/114905113/196594450-06e7bef8-47a8-46cd-b954-79823efdb4d9.png)
+
+Gambar di atas menunjukkan syntax yang digunakan untuk memvalidasikan inputan bilangan. Di setiap kode printf pada masing-masing pilihan operasi bilangan yang menginstruksikan user untuk menginputkan suatu nilai, diberi kode “variabel [spasi] = validasi () ;”. Contohnya bisa dilihat pada gambar di bawah ini. 
+
+ ![image](https://user-images.githubusercontent.com/114905113/196594472-9d3fff4e-6969-4776-9b73-207471df6a85.png)
+
+
+Untuk output validasi dapat dilihat pada gambar di bawah ini.
+
+![image](https://user-images.githubusercontent.com/114905113/196594497-c7608af8-c6ea-4f42-bafc-b95d0b3a937e.png)
+
+ 
+Pada gambar di atas, ditunjukkan bahwa bila user menginputkan nilai selain angka atau bilangan, maka akan muncul peringatan berupa kalimat “INPUT HANYA BERUPA ANGKA, MOHON INPUT ULANG!”. Setelah, itu user diminta untuk menginputkan ulang angka di bawahnya.
+
+![image](https://user-images.githubusercontent.com/114905113/196594524-d27ea168-0e27-4c98-b9ce-c28fdf11097d.png)
+
+
+ 
+Gambar di atas menunjukkan inputan ulang dari user. Bila user berhasil menginputkan ulang nilai berupa angka atau bilangan, program akan memproses oeprasi bilangan dan menampilkan output hasil dari operasi tersebut. 
+ 
+ ![image](https://user-images.githubusercontent.com/114905113/196594558-9ad9f9f9-49aa-4641-aa0c-b12cfc540520.png)
+
+Bila user terus melakukan kesalahan input nilai, maka program akan melakukan looping dengan mengulang peringatan kesalahan input sampai user benar benar menginputkan nilai berupa angka atau  bilangan.
+
+f.	Opsi Mengulang 
+Ketika program sudah selesai menampilkan output hasil, akan muncul pilihan yaitu “Apa ingin mengulang? (Y/T)”. Opsi ini memungkinkan user untuk mengulang atau keluar dari program. Ketika user menginputkan Y atau y, program akan kembali ke tampilan menu, dan user bisa mengulang memilih menu operasi bilangan lainnya. Sebaliknya, jika user menginputkan T atau t, program akan menampilkan output “TEKAN ENTER UNTUK KELUAR DARI PROGRAM”.
+
+![image](https://user-images.githubusercontent.com/114905113/196594576-76f666ba-2e3a-49cb-ba96-86b60d781532.png)
+
+ 
+Gambar di atas merupakan tampilan jika user menginputkan T atau t pada opsi mengulang. Bisa dilihat bahwa terdapat instruksi untuk menekan tombol enter 1 kali untuk keluar dari program. 
 
