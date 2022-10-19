@@ -89,9 +89,9 @@ menu:
     printf("    |     [2]. luas dan keliling persegi panjang                |\n");
     printf("    |     [3]. Luas dan volume tabung                           |\n");
     printf("    |     [4]. kecepatan                                        |\n");
-    printf("    |	  [5]. peluang                                          |\n");
-	printf("    |	  [6]. baris dan deret aritmatika                       |\n");
-	printf("    |	  [7]. debit air                                        |\n");		
+    printf("    |	  [5]. peluang                                      |\n");
+    printf("    |	  [6]. baris dan deret aritmatika                   |\n");
+    printf("    |	  [7]. debit air                                    |\n");		
     printf("    |     [8]. keluar                                           |\n");
     printf("    |===========================================================|\n");
     printf("     Masukkan pilihan operator [1][2][3][4][5][6][7][8]  : "           );
@@ -102,15 +102,12 @@ menu:
   case 1: input:
     system("cls");
     int alas, tinggi, sisi_miring, kll, luas;
-    printf("  |-------------------------------------------------------|\n");
+        printf("  |-------------------------------------------------------|\n");
 	printf("  |                   SEGI TIGA SIKU-SIKU                 |\n");
 	printf("  |-------------------------------------------------------|\n\n");
-	printf("  masukkan nilai alas     =                        ");
-	scanf ("%d", &alas);
-	printf("  masukkan nilai tinggi   =                        ");
-	scanf("%d", &tinggi);
-	printf("  masukkan nilai s_miring =                        ");
-	scanf("%d", &sisi_miring);
+	printf("  masukkan nilai alas     =                        "); alas = validasi ();
+	printf("  masukkan nilai tinggi   =                        "); tinggi = validasi ();
+	printf("  masukkan nilai s_miring =                        "); sisi_miring = validasi ();
 	
 	            kll = kll_segitiga_sikusiku (alas,tinggi, sisi_miring);
 	            luas = luas_segitiga_sikusiku (alas, tinggi);
@@ -137,17 +134,15 @@ case 2:
 	system("cls");
     int p, l, kll, luas;
     printf("  |-------------------------------------------------------|\n");
-	printf("  |                   PERSEGI PANJANG                     |\n");
-	printf("  |-------------------------------------------------------|\n\n");
-	printf("  masukkan nilai panjang =                        ");
-	scanf ("%d", &p);
-	printf("  masukkan nilai lebar   =                        ");
-	scanf("%d", &l);
+    printf("  |                   PERSEGI PANJANG                     |\n");
+    printf("  |-------------------------------------------------------|\n\n");
+    printf("  masukkan nilai panjang =                        "); p = validasi ();
+    printf("  masukkan nilai lebar   =                        "); l = validasi ();
 	
 	            kll = kll_persegipanjang (p, l);
 	            luas = luas_persegipanjang (p, l);
-	printf("\n\njadi, nilai keliling adalah =                    %d  ", kll);
-	printf("\njadi, nilai luas adalah       =                  %d    ", luas);
+	printf("\n\njadi, nilai keliling adalah =                    %d cm  ", kll);
+	printf("\njadi, nilai luas adalah       =                  %d  cm  ", luas);
 	printf("\n\nApakah Ingin Mengulang ? (Y/T) ");
     scanf("%s",&pilih);
      if (pilih == 'Y' | pilih == 'y'){
@@ -171,11 +166,8 @@ case 2:
     printf("  |-------------------------------------------------------|\n");
 	printf("  |                       TABUNG                          |\n");
 	printf("  |-------------------------------------------------------|\n\n");
-	printf("  masukkan nilai jari-jari =                      ");
-	scanf ("%f", &r);
-	printf("  masukkan nilai tinggi    =                      ");
-	scanf("%f", &t);
-	
+	printf("  masukkan nilai jari-jari =                      "); r = validasi ();
+	printf("  masukkan nilai tinggi    =                      "); t = validasi ();
 	            Lp = Lp_tabung (r, t);
 	            volume = volume_tabung (r, t);
 	printf("\n\n  jadi, nilai Luas Permukaan adalah =           %f  ", Lp);
@@ -203,10 +195,8 @@ switch (pilih)
     printf("  |-------------------------------------------------------|\n");
 	printf("  |                      KECEPATAN                        |\n");
 	printf("  |-------------------------------------------------------|\n\n");
-	printf("  masukkan nilai jarak (meter) =                  ");
-	scanf ("%f", &j);
-	printf("  masukkan waktu (detik)       =                  ");
-	scanf("%f", &w);
+	printf("  masukkan nilai jarak (meter) =                  "); j = validasi ();
+	printf("  masukkan waktu (detik)       =                  "); w = validasi ();
 	
 	            kecepatan = hitung_kecepatan (j, w);
 	printf("\n\n  jadi, nilai kecepatan adalah =               %f meter/detik  ", kecepatan);
@@ -233,10 +223,8 @@ switch (pilih)
     printf("  |-------------------------------------------------------|\n");
 	printf("  |                     PELUANG                           |\n");
 	printf("  |-------------------------------------------------------|\n\n");
-	printf("  masukkan banyaknya kejadian  nA =               ");
-	scanf ("%f", &nA);
-	printf("  masukkan banyak ruang sampel nS =               ");
-	scanf("%f", &nS);
+	printf("  masukkan banyaknya kejadian  nA =               "); nA = validasi ();
+	printf("  masukkan banyak ruang sampel nS =               "); nS = validasi ();
 			   
 	        	peluang = hitung_peluang (nA, nS);
 	printf("\n\n  jadi, peluang kejadian adalah =              %f  ", peluang);
@@ -264,13 +252,9 @@ switch (pilih)
     printf("  |-------------------------------------------------------|\n");
 	printf("  |             BARIS DAN DERET ARITMATIKA                |\n");
 	printf("  |-------------------------------------------------------|\n\n");
-	printf("  masukkan banyak suku (n) =                      ");
-	scanf ("%d", &n);
-	printf("  masukkan suku pertama (a)=                      ");
-	scanf("%f", &a);
-	printf("  masukkan beda (b)        =                      ");
-	scanf("%f", &b);
-	
+	printf("  masukkan banyak suku (n) =                      "); n = validasi ();
+	printf("  masukkan suku pertama (a)=                      "); a = validasi ();
+	printf("  masukkan beda (b)        =                      "); b = validasi ();	
 	            Un = Un_aritmatika (n, a, b);
 	            Sn = Sn_aritmatika (n, a, b, Un);
 	printf("\n\n  jadi, nilai Un adalah =                      %f  ", Un);
@@ -298,10 +282,8 @@ switch (pilih)
 	printf("  |-------------------------------------------------------|\n");
 	printf("  |               MENCARI JUMLAH DEBIT AIR                |\n");
 	printf("  |-------------------------------------------------------|\n\n");
-	printf("  masukkan nilai volume air (liter) =             ");
-	scanf ("%f", &v);
-	printf("  masukkan waktu (detik)    =                     ");
-	scanf("%f", &w);
+	printf("  masukkan nilai volume air (liter) =             "); v = validasi ();
+	printf("  masukkan waktu (detik)    =                     "); w = validasi ();
 
 	            debit = debit_air (v, w);
 	printf("\n\n  jadi, nilai debit air adalah =               %f liter/detik  ", debit);
@@ -326,13 +308,54 @@ switch (pilih)
 	case 8: keluar:
 printf("\n       ======ANDA MEMILIH UNTUK KELUAR DARI PROGRAM=======");
 printf("\n\n     ------TEKAN ENTER UNTUK KELUAR DARI PROGRAM--------");
- 
+
+
+}
+
+return 0;
+
+}
+
+void correct(int *var, char *prompt);
+  
+int check(int *var){
+	char buff[1024];
+	char cek;
+	fflush(stdin);
+	if(fgets(buff, sizeof(buff), stdin) != NULL){
+		if(sscanf(buff, "%d %c", var, &cek) == 1) {
+			return 1;
+		}
+	}
+	return 0;
 }
 
 
 
-	
+//Validasi Inputan Bilangan
+void correct(int *var, char *prompt){
+	while(1){
+		printf(prompt);
+		if(check(var))
+			break;
+		printf("\tINPUT HANYA BERUPA BILANGAN, MOHON INPUT ULANG!\n");
+		printf("\n");
+	}
+}
 
+int validasi(){
+	int angka;
+    char karakter;
+    scanf("%d%c", &angka, &karakter);
+    if(karakter != '\n' || angka<0){
+        printf("\n   INPUT HANYA BERUPA ANGKA, MOHON INPUT ULANG!\n\n");
+        printf("   Input ulang : ");
+        fflush(stdin);
+        validasi();
+    }
+	else{
+        return angka;
+    }
 }
 
 
